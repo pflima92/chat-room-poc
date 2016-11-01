@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Routes API Rest
+
+# Login Routes
+POST    /signin/:token              controllers.LoginController.signin(token: String)
+POST	/signout/:token				controllers.LoginController.signout(token: String)
+# Chat Routes
+GET		/users						controllers.ChatController.profiles()
+POST	/chat/:token				controllers.ChatController.send(token: String)
+GET		/chat/:token				controllers.ChatController.receive(token: String)
+# Admin Routes
+POST	/reset/:master				controllers.AdminController.reset(master : String)		
